@@ -1,24 +1,55 @@
-// Mobile hamburger menu
+// Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger) {
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
   });
 }
 
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
-    hamburger.classList.remove('active');
   });
 });
 
-// Smooth scroll for all anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Typing animation
+const typingElement = document.querySelector('.typing-text');
+const texts = ['Medical Student 📚', 'Digital Illustrator 🎨', 'Published Writer ✍️', 'Creative Freelancer 💫'];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  if (!typingElement) return;
+  const currentText = texts[textIndex];
+  if (isDeleting) {
+    typingElement.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    typingElement.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+  }
+  
+  if (!isDeleting && charIndex === currentText.length) {
+    isDeleting = true;
+    setTimeout(typeEffect, 2000);
+    return;
+  }
+  
+  if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    textIndex = (textIndex + 1) % texts.length;
+  }
+  
+  setTimeout(typeEffect, isDeleting ? 100 : 150);
+}
+
+typeEffect();
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]:not([target="_blank"])').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const targetId = this.getAttribute('href');
     if (targetId === "#" || targetId === "") return;
@@ -33,33 +64,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Custom cursor follower
-const cursor = document.querySelector('.cursor-follower');
-if (cursor) {
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+// Publication links alert (for demo - remove when adding actual PDFs)
+document.querySelectorAll('.pub-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href === '#') {
+      e.preventDefault();
+      alert('📄 To add actual PDF: Place your PDF files in a "pdfs" folder and update the href attribute.\n\nExample: href="pdfs/your-story.pdf"');
+    }
   });
-  
-  // Add hover effect on interactive elements
-  const interactiveElements = document.querySelectorAll('a, button, .btn, .portfolio-item, .skill-card, .contact-card');
-  interactiveElements.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.width = '50px';
-      cursor.style.height = '50px';
-      cursor.style.borderColor = '#d4a373';
-      cursor.style.backgroundColor = 'rgba(155, 107, 67, 0.1)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.width = '30px';
-      cursor.style.height = '30px';
-      cursor.style.borderColor = '#9b6b43';
-      cursor.style.backgroundColor = 'transparent';
-    });
-  });
-}
+});
 
-// Intersection Observer for fade-in animations
+// Intersection Observer
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'
@@ -74,7 +90,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Apply animation to elements
 document.querySelectorAll('.skill-card, .portfolio-item, .contact-card, .pub-card, .edu-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(30px)';
@@ -82,10 +97,11 @@ document.querySelectorAll('.skill-card, .portfolio-item, .contact-card, .pub-car
   observer.observe(el);
 });
 
-// Portfolio image modal (lightbox)
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-portfolioItems.forEach(item => {
-  const overlay = item.querySelector('.portfolio-overlay');
-  const img = item.querySelector('img');
-  
-  if (overlay
+// Custom cursor
+const cursor = document.querySelector('.cursor-follower');
+if (cursor) {
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+}

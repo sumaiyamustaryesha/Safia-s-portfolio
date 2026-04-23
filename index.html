@@ -4,34 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Safia Mostary | Medical Student & Creative Freelancer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Floating cursor effect element -->
   <div class="cursor-follower"></div>
+  <div class="particles-container"></div>
 
   <header>
     <div class="container nav-wrapper">
-      <div class="logo">Safia Mostary</div>
+      <div class="logo">
+        <span class="logo-icon">🎨✨</span>
+        <span class="logo-text">Safia Mostary</span>
+      </div>
       <div class="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#work">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#work" class="nav-link">Portfolio</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </header>
 
   <main>
-    <!-- Hero section -->
+    <!-- Hero Section -->
     <section id="home" class="hero-section">
       <div class="container hero">
         <div class="hero-content">
@@ -39,13 +43,12 @@
             <span class="pulse">✦</span> Painting my imaginations... with colors and words <span class="pulse">✦</span>
           </div>
           <h1 class="glow-text">Mst. Safia Mostary</h1>
-          <div class="hero-tagline">Medical Student | Digital Illustrator | Published Writer</div>
+          <div class="hero-tagline">
+            <span class="typing-text"></span>
+          </div>
           <div class="hero-desc">
             <i class="fas fa-map-marker-alt"></i> Dinajpur, Bangladesh
             <br>Blending the precision of medicine with the soul of art
-          </div>
-          <div class="contact-info">
-            <span><i class="fas fa-envelope"></i> mstsafiamostary@gmail.com</span>
           </div>
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Hire on Fiverr <i class="fas fa-arrow-right"></i></a>
@@ -54,8 +57,9 @@
         </div>
         <div class="hero-image">
           <div class="symbolic-avatar floating">
+            <div class="animated-ring"></div>
             <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="100" cy="90" r="42" fill="#EADBC6" stroke="#C5A27E" stroke-width="2"/>
+              <circle cx="100" cy="90" r="42" fill="#E8D5C4" stroke="#C29B6E" stroke-width="2"/>
               <circle cx="82" cy="78" r="3.5" fill="#5D3A2A"/>
               <circle cx="118" cy="78" r="3.5" fill="#5D3A2A"/>
               <path d="M90 96 Q100 106 110 96" stroke="#AA7C58" stroke-width="2.5" fill="none" stroke-linecap="round"/>
@@ -74,9 +78,13 @@
       </div>
     </section>
 
-    <!-- Education + About -->
+    <!-- Education + About - CENTERED -->
     <section id="about">
       <div class="container">
+        <div class="section-header center">
+          <h2 class="section-title">About Me</h2>
+          <div class="title-decoration">✧  ✧  ✧</div>
+        </div>
         <div class="about-wrapper">
           <div class="edu-card hover-lift">
             <h3><i class="fas fa-graduation-cap"></i> Education</h3>
@@ -87,23 +95,23 @@
             </div>
           </div>
           <div class="about-text">
-            <h2 class="section-title">About me</h2>
             <p>Hi, I'm Safia Mostary, a medical student, digital illustrator, and published writer.</p>
-            <p>I am specialized in <strong>hand-drawn style digital illustrations</strong> including stickers, decorative scenes, bookmarks. My work is perfect for your planners, product labels and personal branding.</p>
-            <p>I am also a passionate writer. I have two short stories published in popular Bangladeshi Magazine <strong class="highlight">KISHOR ALO</strong>. Non-fiction article is also my interest.</p>
+            <p>I specialize in <strong>hand-drawn style digital illustrations</strong> including stickers, decorative scenes, bookmarks. Perfect for planners, product labels and personal branding.</p>
+            <p>I'm also a passionate writer with two short stories published in <strong class="highlight">KISHOR ALO</strong> magazine, Bangladesh's most popular youth publication. Non-fiction articles are also my interest.</p>
             <div class="signature-line">— blending science with storytelling, prescriptions with paintings.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills section with HORIZONTAL layout on desktop -->
+    <!-- Skills section - CENTERED -->
     <section id="skills">
       <div class="container">
-        <h2 class="section-title">What I create</h2>
+        <div class="section-header center">
+          <h2 class="section-title">What I Create</h2>
+          <div class="title-decoration">✦  ✦  ✦</div>
+        </div>
         <div class="skills-horizontal">
-          
-          <!-- Digital illustration -->
           <div class="skill-card hover-glow">
             <div class="skill-icon"><i class="fas fa-palette"></i></div>
             <h3>Digital illustration</h3>
@@ -111,53 +119,54 @@
             <p><strong>Tools:</strong> Concepts, ibis Paint X</p>
             <p><strong>Delivery:</strong> PNG or SVG</p>
             <div class="skill-tags">
-              <span>Stickers</span>
-              <span>Scenery</span>
-              <span>Bookmarks</span>
+              <span>🎨 Stickers</span>
+              <span>🌿 Scenery</span>
+              <span>📖 Bookmarks</span>
             </div>
           </div>
-
-          <!-- Content writing -->
           <div class="skill-card hover-glow">
             <div class="skill-icon"><i class="fas fa-pen-fancy"></i></div>
             <h3>Content writing</h3>
             <p><strong>Languages:</strong> English & Bangla</p>
             <p>Blog articles · Health & wellness · Explainer pieces · Research-based content</p>
             <div class="skill-tags">
-              <span>Blog</span>
-              <span>Health</span>
-              <span>Research</span>
+              <span>✍️ Blog</span>
+              <span>💚 Health</span>
+              <span>🔬 Research</span>
             </div>
           </div>
-
-          <!-- Traditional arts -->
           <div class="skill-card hover-glow">
             <div class="skill-icon"><i class="fas fa-brush"></i></div>
             <h3>Traditional arts</h3>
             <p>A mix of styles exploring different art mediums and moods</p>
             <p>Watercolor · Ink · Charcoal sketches</p>
             <div class="skill-tags">
-              <span>Watercolor</span>
-              <span>Ink</span>
-              <span>Sketch</span>
+              <span>💧 Watercolor</span>
+              <span>🖋️ Ink</span>
+              <span>✏️ Sketch</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Gallery with real image support -->
+    <!-- Portfolio Gallery - ARTISTIC ICONS instead of images -->
     <section id="work">
       <div class="container">
-        <h2 class="section-title">Featured Portfolio</h2>
+        <div class="section-header center">
+          <h2 class="section-title">Featured Portfolio</h2>
+          <div class="title-decoration">☆  ☆  ☆</div>
+        </div>
         <p class="section-subtitle">A collection of my best creative works — each piece tells a story</p>
-        
         <div class="portfolio-gallery">
           <div class="portfolio-item hover-scale">
-            <div class="portfolio-image">
-              <img src="work1.jpg" alt="Sticker Art Collection" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Sticker+Art&font=playfair'">
+            <div class="portfolio-image artistic-bg-1">
+              <div class="artistic-icon">
+                <i class="fas fa-sticky-note"></i>
+                <span class="emoji-overlay">🎀</span>
+              </div>
               <div class="portfolio-overlay">
-                <span>Sticker Collection</span>
+                <span>View Project</span>
                 <i class="fas fa-search-plus"></i>
               </div>
             </div>
@@ -166,12 +175,14 @@
               <p>Digital illustration · PNG/SVG</p>
             </div>
           </div>
-
           <div class="portfolio-item hover-scale">
-            <div class="portfolio-image">
-              <img src="work2.jpg" alt="Scenery Art" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Scenery+Art&font=playfair'">
+            <div class="portfolio-image artistic-bg-2">
+              <div class="artistic-icon">
+                <i class="fas fa-tree"></i>
+                <span class="emoji-overlay">🌙</span>
+              </div>
               <div class="portfolio-overlay">
-                <span>Scenery Art</span>
+                <span>View Project</span>
                 <i class="fas fa-search-plus"></i>
               </div>
             </div>
@@ -180,12 +191,14 @@
               <p>Digital illustration · PNG/SVG</p>
             </div>
           </div>
-
           <div class="portfolio-item hover-scale">
-            <div class="portfolio-image">
-              <img src="work3.jpg" alt="Floral Bookmarks" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Floral+Bookmarks&font=playfair'">
+            <div class="portfolio-image artistic-bg-3">
+              <div class="artistic-icon">
+                <i class="fas fa-bookmark"></i>
+                <span class="emoji-overlay">🌸</span>
+              </div>
               <div class="portfolio-overlay">
-                <span>Bookmarks</span>
+                <span>View Project</span>
                 <i class="fas fa-search-plus"></i>
               </div>
             </div>
@@ -194,12 +207,14 @@
               <p>Hand-drawn · Print ready</p>
             </div>
           </div>
-
           <div class="portfolio-item hover-scale">
-            <div class="portfolio-image">
-              <img src="work4.jpg" alt="Magazine Illustration" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Magazine+Art&font=playfair'">
+            <div class="portfolio-image artistic-bg-4">
+              <div class="artistic-icon">
+                <i class="fas fa-feather-alt"></i>
+                <span class="emoji-overlay">📖</span>
+              </div>
               <div class="portfolio-overlay">
-                <span>Editorial</span>
+                <span>View Project</span>
                 <i class="fas fa-search-plus"></i>
               </div>
             </div>
@@ -208,12 +223,14 @@
               <p>Published story illustration</p>
             </div>
           </div>
-
           <div class="portfolio-item hover-scale">
-            <div class="portfolio-image">
-              <img src="work5.jpg" alt="Custom Commission" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Custom+Work&font=playfair'">
+            <div class="portfolio-image artistic-bg-5">
+              <div class="artistic-icon">
+                <i class="fas fa-heart"></i>
+                <span class="emoji-overlay">✨</span>
+              </div>
               <div class="portfolio-overlay">
-                <span>Commission</span>
+                <span>View Project</span>
                 <i class="fas fa-search-plus"></i>
               </div>
             </div>
@@ -223,80 +240,106 @@
             </div>
           </div>
         </div>
-
-        <div class="more-works">
-          <p>✨ Many more works available — contact for custom commissions ✨</p>
-        </div>
       </div>
     </section>
 
     <!-- Publications Section -->
-    <section class="publications">
+    <section id="publications" class="publications">
       <div class="container">
-        <h2 class="section-title">Published Writings</h2>
+        <div class="section-header center">
+          <h2 class="section-title">Published Writings</h2>
+          <div class="title-decoration">✧  ✧  ✧</div>
+        </div>
+        <p class="section-subtitle">Featured in Bangladesh's most popular magazines and publications</p>
+        
         <div class="publication-cards">
+          <!-- Kishor Alo Magazine Card -->
           <div class="pub-card hover-lift">
-            <i class="fas fa-book-open"></i>
+            <div class="pub-icon"><i class="fas fa-book-open"></i></div>
             <h3>Kishor Alo Magazine</h3>
-            <p>Two short stories published in Bangladesh's most popular youth magazine</p>
-            <a href="#" class="pub-link">Read Sample <i class="fas fa-external-link-alt"></i></a>
+            <p class="pub-desc">Two short stories published in Bangladesh's most beloved youth magazine</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> Read Story 1 (PDF)
+              </a>
+              <a href="#" class="pub-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> Read Story 2 (PDF)
+              </a>
+              <a href="https://www.kishoralo.com.bd" class="pub-link" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Visit Magazine Website
+              </a>
+            </div>
           </div>
+          
+          <!-- Non-Fiction Articles Card -->
           <div class="pub-card hover-lift">
-            <i class="fas fa-newspaper"></i>
-            <h3>Non-fiction Articles</h3>
-            <p>Health & wellness, medical humanities, and creative non-fiction</p>
-            <a href="#" class="pub-link">Request Portfolio <i class="fas fa-envelope"></i></a>
+            <div class="pub-icon"><i class="fas fa-newspaper"></i></div>
+            <h3>Non-Fiction & Articles</h3>
+            <p class="pub-desc">Health & wellness, medical humanities, and creative non-fiction</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> Health & Wellness Article (PDF)
+              </a>
+              <a href="#" class="pub-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> Medical Humanities Essay (PDF)
+              </a>
+              <a href="#" class="pub-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> Creative Non-Fiction Sample
+              </a>
+            </div>
           </div>
+        </div>
+        
+        <div class="pdf-note">
+          <p>💡 <strong>Note:</strong> To add actual PDFs, place your files in a "pdfs" folder and update the link paths above.</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section with ALL details -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
       <div class="container">
-        <h2 class="section-title">Let's Connect</h2>
+        <div class="section-header center">
+          <h2 class="section-title">Let's Connect</h2>
+          <div class="title-decoration">★  ★  ★</div>
+        </div>
         <p class="section-subtitle">Available for commissions, collaborations, and creative projects</p>
         
         <div class="contact-grid">
           <div class="contact-card hover-lift">
             <i class="fas fa-envelope"></i>
             <h3>Email</h3>
-            <a href="mailto:mstsafiamostary@gmail.com">mstsafiamostary@gmail.com</a>
+            <a href="mailto:mstsafiamostary@gmail.com" target="_blank">mstsafiamostary@gmail.com</a>
           </div>
-          
           <div class="contact-card hover-lift">
             <i class="fab fa-telegram"></i>
             <h3>Telegram</h3>
-            <a href="https://t.me/Odree36">@Odree36</a>
+            <a href="https://t.me/Odree36" target="_blank">@Odree36</a>
           </div>
-          
           <div class="contact-card hover-lift">
             <i class="fab fa-whatsapp"></i>
             <h3>WhatsApp</h3>
-            <a href="https://wa.me/8801962345993">+880 1962-345993</a>
+            <a href="https://wa.me/8801962345993" target="_blank">+880 1962-345993</a>
           </div>
-          
           <div class="contact-card hover-lift">
             <i class="fas fa-phone"></i>
             <h3>Phone</h3>
-            <a href="tel:+8801962345993">+880 1962-345993</a>
+            <a href="tel:+8801962345993" target="_blank">+880 1962-345993</a>
           </div>
-          
           <div class="contact-card hover-lift">
             <i class="fab fa-facebook"></i>
             <h3>Facebook</h3>
-            <a href="https://www.facebook.com/share/1F9TVcXEA2/">Safia Mostary</a>
+            <a href="https://facebook.com/100083062971464" target="_blank">Safia Mostary</a>
           </div>
-          
           <div class="contact-card hover-lift">
             <i class="fab fa-fiverr"></i>
             <h3>Fiverr</h3>
-            <a href="#">Hire on Fiverr</a>
+            <a href="#" target="_blank">Hire on Fiverr</a>
           </div>
         </div>
         
         <div class="cta-message">
-          <p>💬 Response within 24 hours — Let's create something beautiful together!</p>
+          <p>⌚ Response within 24 hours — Let's create something beautiful together!</p>
         </div>
       </div>
     </section>
