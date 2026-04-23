@@ -4,366 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Safia Mostary | Medical Student & Creative Freelancer</title>
-  <!-- Google Fonts & simple reset -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fefcf7;
-      color: #1e2a2e;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    /* header / nav */
-    header {
-      background: rgba(255, 252, 245, 0.96);
-      backdrop-filter: blur(8px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #f0e5da;
-      padding: 18px 0;
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #9b6b43, #5e3a2b);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #2c3e2f;
-      transition: 0.2s;
-      font-size: 1rem;
-    }
-
-    .nav-links a:hover {
-      color: #c17b4b;
-    }
-
-    /* buttons & common */
-    .btn {
-      display: inline-block;
-      background: #d9c5b0;
-      color: #2c2b28;
-      padding: 10px 28px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.25s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: #9b6b43;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .btn-primary:hover {
-      background: #7e553a;
-      transform: translateY(-2px);
-    }
-
-    /* hero */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 48px;
-      padding: 64px 0 48px;
-    }
-
-    .hero-content {
-      flex: 1.2;
-    }
-
-    .hero-badge {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #b47c48;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .hero-content h1 {
-      font-size: 3.3rem;
-      font-weight: 700;
-      font-family: 'Playfair Display', serif;
-      line-height: 1.2;
-      color: #2b3b2c;
-      margin-bottom: 16px;
-    }
-
-    .hero-tagline {
-      font-size: 1.2rem;
-      color: #5f6c5c;
-      margin-bottom: 24px;
-      border-left: 3px solid #c8aa7a;
-      padding-left: 20px;
-    }
-
-    .hero-desc {
-      margin-bottom: 32px;
-      color: #2f3e35;
-    }
-
-    .contact-info {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 16px;
-      font-size: 0.95rem;
-    }
-
-    .contact-info span i {
-      margin-right: 8px;
-      color: #9b6b43;
-    }
-
-    /* symbolic image - professional vector style */
-    .hero-image {
-      flex: 0.9;
-      display: flex;
-      justify-content: center;
-    }
-
-    .symbolic-avatar {
-      background: linear-gradient(145deg, #f7ede3, #e7d9ce);
-      width: 320px;
-      height: 320px;
-      border-radius: 42% 58% 70% 30% / 44% 38% 62% 56%;
-      box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.05), -5px -5px 12px rgba(255,255,240,0.8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: 0.3s ease;
-    }
-
-    .symbolic-avatar svg {
-      width: 260px;
-      height: 260px;
-      filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.1));
-    }
-
-    /* sections */
-    section {
-      padding: 72px 0;
-      border-bottom: 1px solid #f0e2d4;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin-bottom: 48px;
-      position: relative;
-      display: inline-block;
-    }
-    .section-title:after {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 0;
-      width: 64px;
-      height: 3px;
-      background: #c8aa7a;
-    }
-
-    /* education + about combined */
-    .grid-2col {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
-    }
-
-    .edu-card {
-      background: white;
-      padding: 28px;
-      border-radius: 28px;
-      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
-    }
-
-    .edu-card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-    }
-
-    .about-text p {
-      margin-bottom: 20px;
-      font-size: 1.05rem;
-    }
-
-    .signature-line {
-      margin-top: 20px;
-      font-style: italic;
-      color: #9b6b43;
-      font-weight: 500;
-    }
-
-    /* skills area */
-    .skills-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
-    }
-
-    .skill-category {
-      background: #ffffffdb;
-      border-radius: 32px;
-      padding: 28px;
-      transition: all 0.2s;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
-      border: 1px solid #f3e9e0;
-    }
-
-    .skill-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 24px;
-      font-size: 1.7rem;
-      font-weight: 600;
-    }
-
-    .skill-header i {
-      font-size: 2rem;
-      color: #b47c48;
-    }
-
-    .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-top: 20px;
-    }
-
-    /* mock project cards for work images (work1-5) */
-    .mock-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 24px;
-      margin-top: 20px;
-    }
-
-    .mock-card {
-      background: #fbf5ed;
-      border-radius: 24px;
-      overflow: hidden;
-      transition: 0.25s;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.05);
-    }
-
-    .mock-card .img-placeholder {
-      background: #e4d5c4;
-      height: 170px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      color: #9b6b43;
-    }
-
-    .mock-card p {
-      padding: 14px;
-      font-weight: 500;
-      text-align: center;
-      background: white;
-    }
-
-    /* magazine links */
-    .magazine-links {
-      display: flex;
-      gap: 24px;
-      margin: 20px 0 10px;
-    }
-    .mag-link {
-      background: #ede3d7;
-      padding: 12px 20px;
-      border-radius: 60px;
-      text-decoration: none;
-      color: #3c2a21;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-
-    /* contact footer */
-    .footer-contact {
-      background: #faf4ec;
-      text-align: center;
-      padding: 48px 0;
-      border-top: 1px solid #e9dbce;
-    }
-
-    .social-icons a {
-      color: #5e4b37;
-      font-size: 1.5rem;
-      margin: 0 12px;
-      transition: 0.2s;
-    }
-
-    @media (max-width: 800px) {
-      .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-      .grid-2col {
-        grid-template-columns: 1fr;
-      }
-      .nav-wrapper {
-        flex-direction: column;
-        gap: 16px;
-      }
-      .container {
-        padding: 0 24px;
-      }
-      .hero-content h1 {
-        font-size: 2.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Floating cursor effect element -->
+  <div class="cursor-follower"></div>
+
   <header>
     <div class="container nav-wrapper">
       <div class="logo">Safia Mostary</div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -375,29 +31,29 @@
   </header>
 
   <main>
-    <!-- Hero / home section -->
-    <section id="home" style="padding-top: 20px;">
+    <!-- Hero section -->
+    <section id="home" class="hero-section">
       <div class="container hero">
         <div class="hero-content">
-          <div class="hero-badge">✦ Painting my imaginations... with colors and words ✦</div>
-          <h1>Mst. Safia Mostary</h1>
+          <div class="hero-badge">
+            <span class="pulse">✦</span> Painting my imaginations... with colors and words <span class="pulse">✦</span>
+          </div>
+          <h1 class="glow-text">Mst. Safia Mostary</h1>
           <div class="hero-tagline">Medical Student | Digital Illustrator | Published Writer</div>
           <div class="hero-desc">
-            Dinajpur, Bangladesh <br>
-            Blending the precision of medicine with the soul of art — creating hand-drawn illustrations, healing words, and visual stories.
+            <i class="fas fa-map-marker-alt"></i> Dinajpur, Bangladesh
+            <br>Blending the precision of medicine with the soul of art
           </div>
           <div class="contact-info">
             <span><i class="fas fa-envelope"></i> mstsafiamostary@gmail.com</span>
-            <span><i class="fas fa-map-marker-alt"></i> Dinajpur, Bangladesh</span>
           </div>
-          <div style="margin-top: 32px;">
-            <a href="#contact" class="btn btn-primary">Hire me on Fiverr</a>
-            <a href="#work" class="btn" style="margin-left: 12px; background: #e7d9ce;">View creations</a>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Hire on Fiverr <i class="fas fa-arrow-right"></i></a>
+            <a href="#work" class="btn btn-outline">View Portfolio <i class="fas fa-palette"></i></a>
           </div>
         </div>
         <div class="hero-image">
-          <div class="symbolic-avatar">
-            <!-- professional symbolic illustration: artistic blend of medical and creative -->
+          <div class="symbolic-avatar floating">
             <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="100" cy="90" r="42" fill="#EADBC6" stroke="#C5A27E" stroke-width="2"/>
               <circle cx="82" cy="78" r="3.5" fill="#5D3A2A"/>
@@ -405,10 +61,8 @@
               <path d="M90 96 Q100 106 110 96" stroke="#AA7C58" stroke-width="2.5" fill="none" stroke-linecap="round"/>
               <path d="M100 110 L100 128" stroke="#AA7C58" stroke-width="2.5"/>
               <path d="M86 118 L100 128 L114 118" stroke="#AA7C58" stroke-width="2.2" fill="none"/>
-              <!-- stethoscope symbol -->
               <path d="M145 55 C158 48 172 58 168 72 C165 82 153 85 146 77" stroke="#9C6E42" stroke-width="2.5" fill="none"/>
               <circle cx="146" cy="77" r="6" stroke="#9C6E42" stroke-width="2" fill="#FAF0E1"/>
-              <!-- paintbrush + feather quill -->
               <path d="M48 142 L66 128 L70 138 L54 150 Z" fill="#C29B6E" stroke="#86643E" stroke-width="1.5"/>
               <path d="M64 130 L74 122 L78 128 L68 136 Z" fill="#E6C99C"/>
               <path d="M155 140 L168 128 L174 138 L162 148 Z" fill="#C6A27A"/>
@@ -420,190 +74,241 @@
       </div>
     </section>
 
-    <!-- Education + About section -->
+    <!-- Education + About -->
     <section id="about">
-      <div class="container grid-2col">
-        <div class="edu-card">
-          <h3><i class="fas fa-graduation-cap" style="margin-right: 12px; color:#9b6b43;"></i> Education</h3>
-          <div style="margin-top: 20px;">
-            <h4 style="font-size: 1.3rem;">Dinajpur Medical College</h4>
-            <p style="font-weight: 500; color: #5a3e2c;">MBBS | July 2023 – present</p>
-            <p>Pursuing medical degree with passion for patient care & holistic healing. Integrating empathy and creativity into healthcare narratives.</p>
+      <div class="container">
+        <div class="about-wrapper">
+          <div class="edu-card hover-lift">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="edu-content">
+              <h4>Dinajpur Medical College</h4>
+              <p class="edu-date">MBBS | July 2023 – present</p>
+              <p>Pursuing medical degree with passion for patient care & holistic healing. Integrating empathy and creativity into healthcare narratives.</p>
+            </div>
           </div>
-        </div>
-        <div class="about-text">
-          <h2 class="section-title" style="margin-bottom: 24px;">About me</h2>
-          <p>Hi, I'm Safia Mostary, a medical student, digital illustrator, and published writer.</p>
-          <p>I am specialized in <strong>hand-drawn style digital illustrations</strong> including stickers, decorative scenes, bookmarks. My work is perfect for your planners, product labels and personal branding.</p>
-          <p>I am also a passionate writer. I have two short stories published in popular Bangladeshi Magazine <strong>KISHOR ALO</strong>. Non-fiction article is also my interest.</p>
-          <p>If you're looking for custom illustrations or a creative collaborator, I'd love to connect.</p>
-          <div class="signature-line">— blending science with storytelling, prescriptions with paintings.</div>
+          <div class="about-text">
+            <h2 class="section-title">About me</h2>
+            <p>Hi, I'm Safia Mostary, a medical student, digital illustrator, and published writer.</p>
+            <p>I am specialized in <strong>hand-drawn style digital illustrations</strong> including stickers, decorative scenes, bookmarks. My work is perfect for your planners, product labels and personal branding.</p>
+            <p>I am also a passionate writer. I have two short stories published in popular Bangladeshi Magazine <strong class="highlight">KISHOR ALO</strong>. Non-fiction article is also my interest.</p>
+            <div class="signature-line">— blending science with storytelling, prescriptions with paintings.</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills and project samples -->
+    <!-- Skills section with HORIZONTAL layout on desktop -->
     <section id="skills">
       <div class="container">
         <h2 class="section-title">What I create</h2>
-        <div class="skills-grid">
+        <div class="skills-horizontal">
           
-          <!-- Digital illustration section -->
-          <div class="skill-category">
-            <div class="skill-header">
-              <i class="fas fa-palette"></i> <span># Digital illustration</span>
-            </div>
-            <p><strong>Specialties:</strong> stickers, scenery art, bookmarks · Tools: Concepts, ibis Paint X · Delivery: PNG or SVG</p>
-            <div class="project-list">
-              <div class="mock-gallery">
-                <div class="mock-card"><div class="img-placeholder"><i class="fas fa-sticky-note" style="font-size: 3rem;"></i></div><p>✦ Whimsical Stickers</p></div>
-                <div class="mock-card"><div class="img-placeholder"><i class="fas fa-tree" style="font-size: 3rem;"></i></div><p>🌿 Scenery art</p></div>
-                <div class="mock-card"><div class="img-placeholder"><i class="fas fa-bookmark" style="font-size: 3rem;"></i></div><p>📖 Floral Bookmarks</p></div>
-              </div>
+          <!-- Digital illustration -->
+          <div class="skill-card hover-glow">
+            <div class="skill-icon"><i class="fas fa-palette"></i></div>
+            <h3>Digital illustration</h3>
+            <p><strong>Specialties:</strong> stickers, scenery art, bookmarks</p>
+            <p><strong>Tools:</strong> Concepts, ibis Paint X</p>
+            <p><strong>Delivery:</strong> PNG or SVG</p>
+            <div class="skill-tags">
+              <span>Stickers</span>
+              <span>Scenery</span>
+              <span>Bookmarks</span>
             </div>
           </div>
 
           <!-- Content writing -->
-          <div class="skill-category">
-            <div class="skill-header">
-              <i class="fas fa-pen-fancy"></i> <span># Content writing</span>
+          <div class="skill-card hover-glow">
+            <div class="skill-icon"><i class="fas fa-pen-fancy"></i></div>
+            <h3>Content writing</h3>
+            <p><strong>Languages:</strong> English & Bangla</p>
+            <p>Blog articles · Health & wellness · Explainer pieces · Research-based content</p>
+            <div class="skill-tags">
+              <span>Blog</span>
+              <span>Health</span>
+              <span>Research</span>
             </div>
-            <p><strong>Languages:</strong> English & Bangla. Available for: Blog articles · Health & wellness writing · Explainer pieces · Research-based content.</p>
-            <div class="magazine-links">
-              <a href="#" class="mag-link" target="_blank"><i class="fas fa-book-open"></i> Kishor Alo Story (Sample)</a>
-              <a href="#" class="mag-link" target="_blank"><i class="fas fa-newspaper"></i> Non-fiction Feature</a>
-            </div>
-            <p style="font-size: 0.85rem; margin-top: 12px;">※ These are creative sample links; actual published works available upon request.</p>
           </div>
 
           <!-- Traditional arts -->
-          <div class="skill-category">
-            <div class="skill-header">
-              <i class="fas fa-brush"></i> <span># Traditional arts</span>
-            </div>
-            <p>A mix of styles exploring different art mediums and moods — charcoal, watercolor, ink sketches.</p>
-            <div class="mock-gallery">
-              <div class="mock-card"><div class="img-placeholder"><i class="fas fa-feather-alt"></i></div><p>Ink mood sketch</p></div>
-              <div class="mock-card"><div class="img-placeholder"><i class="fas fa-water"></i></div><p>Watercolor study</p></div>
+          <div class="skill-card hover-glow">
+            <div class="skill-icon"><i class="fas fa-brush"></i></div>
+            <h3>Traditional arts</h3>
+            <p>A mix of styles exploring different art mediums and moods</p>
+            <p>Watercolor · Ink · Charcoal sketches</p>
+            <div class="skill-tags">
+              <span>Watercolor</span>
+              <span>Ink</span>
+              <span>Sketch</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio / Work section with 5 work images (placeholders, but professional visual) -->
+    <!-- Portfolio Gallery with real image support -->
     <section id="work">
       <div class="container">
-        <h2 class="section-title">Featured creations — my visual portfolio</h2>
-        <p style="margin-bottom: 28px;">A selection of commissioned works: stickers, bookmarks, scenic illustrations, and editorial graphics.</p>
-        <div class="mock-gallery" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px;">
-          <div class="mock-card"><div class="img-placeholder" style="background: #f0e2d4;"><i class="fas fa-cat" style="font-size: 3rem; color: #b47c48;"></i></div><p>work1 : Cute Sticker set</p></div>
-          <div class="mock-card"><div class="img-placeholder" style="background: #e9daca;"><i class="fas fa-mountain" style="font-size: 3rem;"></i></div><p>work2 : Mountain bookmark</p></div>
-          <div class="mock-card"><div class="img-placeholder" style="background: #f5ede3;"><i class="fas fa-seedling" style="font-size: 3rem;"></i></div><p>work3 : Botanical scene</p></div>
-          <div class="mock-card"><div class="img-placeholder" style="background: #eedfcb;"><i class="fas fa-moon" style="font-size: 3rem;"></i></div><p>work4 : Night story art</p></div>
-          <div class="mock-card"><div class="img-placeholder" style="background: #f2e4d6;"><i class="fas fa-heart" style="font-size: 3rem;"></i></div><p>work5 : Romantic illustration</p></div>
+        <h2 class="section-title">Featured Portfolio</h2>
+        <p class="section-subtitle">A collection of my best creative works — each piece tells a story</p>
+        
+        <div class="portfolio-gallery">
+          <div class="portfolio-item hover-scale">
+            <div class="portfolio-image">
+              <img src="work1.jpg" alt="Sticker Art Collection" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Sticker+Art&font=playfair'">
+              <div class="portfolio-overlay">
+                <span>Sticker Collection</span>
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Whimsical Stickers</h4>
+              <p>Digital illustration · PNG/SVG</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item hover-scale">
+            <div class="portfolio-image">
+              <img src="work2.jpg" alt="Scenery Art" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Scenery+Art&font=playfair'">
+              <div class="portfolio-overlay">
+                <span>Scenery Art</span>
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Nature Landscapes</h4>
+              <p>Digital illustration · PNG/SVG</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item hover-scale">
+            <div class="portfolio-image">
+              <img src="work3.jpg" alt="Floral Bookmarks" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Floral+Bookmarks&font=playfair'">
+              <div class="portfolio-overlay">
+                <span>Bookmarks</span>
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Floral Bookmarks</h4>
+              <p>Hand-drawn · Print ready</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item hover-scale">
+            <div class="portfolio-image">
+              <img src="work4.jpg" alt="Magazine Illustration" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Magazine+Art&font=playfair'">
+              <div class="portfolio-overlay">
+                <span>Editorial</span>
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Kishor Alo Feature</h4>
+              <p>Published story illustration</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item hover-scale">
+            <div class="portfolio-image">
+              <img src="work5.jpg" alt="Custom Commission" onerror="this.src='https://placehold.co/600x500/f5ede3/9b6b43?text=Custom+Work&font=playfair'">
+              <div class="portfolio-overlay">
+                <span>Commission</span>
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Custom Illustration</h4>
+              <p>Personal branding · Client work</p>
+            </div>
+          </div>
         </div>
-        <div style="margin-top: 36px; text-align: center;">
-          <p class="signature-line">* Each piece is hand-illustrated, custom-made for clients. High-resolution PNG/SVG delivered.</p>
+
+        <div class="more-works">
+          <p>✨ Many more works available — contact for custom commissions ✨</p>
         </div>
       </div>
     </section>
 
-    <!-- Extra projects section : medical + creative writing project showcase -->
-    <section style="background: #fef9f2;">
+    <!-- Publications Section -->
+    <section class="publications">
       <div class="container">
-        <h2 class="section-title">Projects & Collaborations</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between;">
-          <div style="flex:1; min-width: 200px;">
-            <i class="fas fa-book" style="font-size: 2rem; color:#b47c48;"></i>
-            <h3 style="margin: 12px 0 8px;">Published in Kishor Alo</h3>
-            <p>Two short stories, recognized for narrative depth. Also available for ghostwriting and creative content for magazines.</p>
+        <h2 class="section-title">Published Writings</h2>
+        <div class="publication-cards">
+          <div class="pub-card hover-lift">
+            <i class="fas fa-book-open"></i>
+            <h3>Kishor Alo Magazine</h3>
+            <p>Two short stories published in Bangladesh's most popular youth magazine</p>
+            <a href="#" class="pub-link">Read Sample <i class="fas fa-external-link-alt"></i></a>
           </div>
-          <div style="flex:1; min-width: 200px;">
-            <i class="fas fa-stethoscope" style="font-size: 2rem; color:#b47c48;"></i>
-            <h3 style="margin: 12px 0 8px;">Health & Wellness Writing</h3>
-            <p>Evidence-based articles on mental health, study-life balance, and medical humanities. Perfect for health blogs.</p>
-          </div>
-          <div style="flex:1; min-width: 200px;">
-            <i class="fas fa-chalkboard-teacher" style="font-size: 2rem; color:#b47c48;"></i>
-            <h3 style="margin: 12px 0 8px;">Illustration Commissions</h3>
-            <p>Custom digital stickers, bookmarks, and decorative scenes for Etsy sellers, small businesses, and personal branding.</p>
+          <div class="pub-card hover-lift">
+            <i class="fas fa-newspaper"></i>
+            <h3>Non-fiction Articles</h3>
+            <p>Health & wellness, medical humanities, and creative non-fiction</p>
+            <a href="#" class="pub-link">Request Portfolio <i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact + CTA -->
-    <section id="contact">
-      <div class="container" style="text-align: center;">
-        <h2 class="section-title" style="margin-bottom: 28px;">Let's bring ideas to life</h2>
-        <p style="max-width: 560px; margin: 0 auto 32px;">Whether you need unique digital illustrations, creative writing, or medical content — I’d love to collaborate on Fiverr or via email.</p>
-        <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
-          <a href="mailto:mstsafiamostary@gmail.com" class="btn btn-primary" style="background:#9b6b43;"><i class="fas fa-envelope"></i> Email Me</a>
-          <a href="#" class="btn" style="background: #1dbf73; color: white;"><i class="fab fa-fiverr"></i> Fiverr Gig</a>
+    <!-- Contact Section with ALL details -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Available for commissions, collaborations, and creative projects</p>
+        
+        <div class="contact-grid">
+          <div class="contact-card hover-lift">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <a href="mailto:mstsafiamostary@gmail.com">mstsafiamostary@gmail.com</a>
+          </div>
+          
+          <div class="contact-card hover-lift">
+            <i class="fab fa-telegram"></i>
+            <h3>Telegram</h3>
+            <a href="https://t.me/Odree36">@Odree36</a>
+          </div>
+          
+          <div class="contact-card hover-lift">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/8801962345993">+880 1962-345993</a>
+          </div>
+          
+          <div class="contact-card hover-lift">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <a href="tel:+8801962345993">+880 1962-345993</a>
+          </div>
+          
+          <div class="contact-card hover-lift">
+            <i class="fab fa-facebook"></i>
+            <h3>Facebook</h3>
+            <a href="https://www.facebook.com/share/1F9TVcXEA2/">Safia Mostary</a>
+          </div>
+          
+          <div class="contact-card hover-lift">
+            <i class="fab fa-fiverr"></i>
+            <h3>Fiverr</h3>
+            <a href="#">Hire on Fiverr</a>
+          </div>
         </div>
-        <div class="social-icons" style="margin-top: 44px;">
-          <a href="#"><i class="fab fa-behance"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        
+        <div class="cta-message">
+          <p>💬 Response within 24 hours — Let's create something beautiful together!</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer-contact">
+  <footer>
     <div class="container">
-      <p>© 2025 Mst. Safia Mostary — Medical student & creative freelancer. Painting imaginations with colors & words.</p>
+      <p>© 2025 Mst. Safia Mostary — Medical student & creative freelancer</p>
+      <p class="footer-tagline">Painting imaginations with colors & words ✨</p>
     </div>
   </footer>
 
-  <!-- simple JS for smooth scroll and interactivity -->
-  <script>
-    (function() {
-      // smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('href');
-          if (targetId === "#" || targetId === "") return;
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            e.preventDefault();
-            targetElement.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-
-      // add micro-interaction: hover on symbolic avatar
-      const avatar = document.querySelector('.symbolic-avatar');
-      if(avatar) {
-        avatar.addEventListener('mouseenter', () => {
-          avatar.style.transform = 'scale(1.02)';
-          avatar.style.transition = '0.2s';
-        });
-        avatar.addEventListener('mouseleave', () => {
-          avatar.style.transform = 'scale(1)';
-        });
-      }
-
-      // mock fiverr alert (just for demonstration)
-      const fiverrBtn = document.querySelector('a[href="#"]:not(.mag-link)');
-      if(fiverrBtn && fiverrBtn.innerText.includes('Fiverr')) {
-        fiverrBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          alert("✨ Safia's Fiverr profile is ready for custom orders! Contact via email for direct portfolio access. Thank you!");
-        });
-      }
-      // sample magazine links alert - but it's just demo
-      document.querySelectorAll('.mag-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          alert("📚 Full published stories available upon request. Contact Safia for magazine credits or writing samples.");
-        });
-      });
-    })();
-  </script>
+  <script src="script1.js"></script>
 </body>
 </html>
