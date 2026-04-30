@@ -105,3 +105,54 @@ if (cursor) {
     cursor.style.top = e.clientY + 'px';
   });
 }
+
+
+// LIGHTBOX FUNCTIONALITY - View Sticker Button Works!
+const lightbox = document.getElementById('lightbox-modal');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close-lightbox');
+const viewButtons = document.querySelectorAll('.view-sticker-btn');
+
+// Open lightbox when clicking "View Sticker" button
+viewButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const imagePath = this.getAttribute('data-image');
+    const stickerName = this.closest('.sticker-card-fixed').querySelector('h4').innerText;
+    
+    lightboxImg.src = imagePath;
+    lightbox.style.display = 'block';
+    
+    // Update caption
+    const caption = document.querySelector('.lightbox-caption');
+    if (caption) {
+      caption.innerText = stickerName + ' — PNG/SVG · 300 DPI';
+    }
+    
+    // Prevent body scroll when lightbox is open
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+// Close lightbox when clicking X
+if (closeBtn) {
+  closeBtn.addEventListener('click', function() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+}
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener('click', function(e) {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && lightbox.style.display === 'block') {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
